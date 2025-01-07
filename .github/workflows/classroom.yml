@@ -70,4 +70,4 @@ jobs:
         TEST-CSS_RESULTS: "${{steps.test-css.outputs.result}}"
         TEST_CSS_EXCEEDS: "${{steps.test-css_exceeds.outputs.result}}"
       with:
-        runners: test-html,test-html_exceeds,test-css,test-css_exceeds
+        runners: [test-html,test-html_exceeds,test-css,test-css_exceeds]
