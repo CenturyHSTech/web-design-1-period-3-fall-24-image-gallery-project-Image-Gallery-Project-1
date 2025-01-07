@@ -66,7 +66,8 @@ jobs:
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         TEST-HTML_RESULTS: '${{steps.test-html.outputs.result}}'
-        TEST-HTML_EXCEEDS: '${{steps.test-html_exceeds.outputs.result}}'
+        TEST-HTML_EXCEEDS_RESULTS: '${{steps.test-html-exceeds.outputs.result}}'
         TEST-CSS_RESULTS: '${{steps.test-css.outputs.result}}'
+        TEST-CSS_EXCEEDS_RESULTS: '${{steps.test-css-exceeds.outputs.result}}'
       with:
-        runners: test-html,test-html-exceeds,test-css
+        runners: test-html,test-html-exceeds,test-css,test-css-exceeds
